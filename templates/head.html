@@ -1,0 +1,45 @@
+{% block head %}
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>{% block title %} {{ SITENAME }} | {{ SIDEBAR_DIGEST }} {% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ AUTHOR_DESCRIPTION }}">
+  <meta name="author" content="{{ AUTHOR }}">
+
+  <link rel="shortcut icon" href="{{ FAVICON }}">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="{{ SITENAME }}">
+  <meta itemprop="image" content="{{ AVATAR}}">
+  <meta itemprop="description" content="{{ AUTHOR_DESCRIPTION }}">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+  {% if FEED_ALL_ATOM %}
+    <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+    <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
+  <meta name="twitter:image" content="">
+
+<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
+<meta name="twitter:url" content="{{ SITEURL }}">
+<meta name="twitter:title" content="{{ SITENAME }}">
+<meta name="twitter:description" content="{{ SIDEBAR_DIGEST }}">
+
+<!-- Facebook Meta Data -->
+<meta property="og:title" content="{{ SITENAME }}" />
+<meta property="og:description" content="{{ SIDEBAR_DIGEST }}" />
+<meta property="og:image" content="" />
+
+{% endblock %}
+

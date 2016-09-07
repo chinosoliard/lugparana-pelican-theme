@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}" itemscope itemtype="http://schema.org/Person">
+<head>
+	{% include 'head.html' %}
+</head>
+
+<body>
+	<!-- Sidebar -->
+	<aside>
+
+		{% include 'header.html' %}
+
+		{% include 'menu.html' %}
+
+		{% include 'social.html' %}
+
+	</aside>
+
+	<article>
+
+		{% block content %}
+
+		{% endblock %}
+
+	</article>
+
+		{% include 'footer.html' %}
+
+		{% include 'analytics.html' %}
+</body>
+</html>

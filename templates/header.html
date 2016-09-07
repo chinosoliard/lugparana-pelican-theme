@@ -1,0 +1,11 @@
+<a href="{{ SITEURL }}/">
+	{% if SITELOGO %}
+	<img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+	{% endif %}
+</a>
+
+<h1>{{ SITENAME }}</h1>
+{% if SITEDESCRIPTION %}
+<p>{{ SITEDESCRIPTION }}</p>
+{% endif %}
+<br>

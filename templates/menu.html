@@ -1,0 +1,18 @@
+    <nav class="nav">
+      <ul class="list-bare">
+     
+        {% if DISPLAY_HOME_ON_MENU %}
+          <li><a class="nav__link" href="{{ SITEURL }}/">Noticias</a></li>
+        {% endif %}
+
+
+	{% for title, link in MENUITEMS %}
+          <li><a class="nav__link" href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+         
+        {% if DISPLAY_PAGES_ON_MENU and PAGES %}{% for p in pages %}
+          <li><a class="nav__link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+        {% endfor %}{% endif %}
+         
+      </ul>
+    </nav>
