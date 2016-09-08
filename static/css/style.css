@@ -121,7 +121,7 @@ aside {
   color: white;
   box-shadow: 0 0 3px black;
   text-align: center;
-  padding-top: 8%;
+  padding-top: 2%;
   background-size: cover;
 }
 
@@ -228,6 +228,7 @@ aside > h2 {
 
   footer
   {
+    text-align:center;
     padding: 1em;
     margin-left: 1em;
     margin-top: 0;

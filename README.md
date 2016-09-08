@@ -83,6 +83,17 @@ DISPLAY_HOME_ON_MENU = True
 DISPLAY_PAGES_ON_MENU = True
 
 MENUITEMS = (('Blog', SITEURL),)
+
+SOCIAL = (('facebook', 'https://www.facebook.com/groups/lugparana/'),
+          ('linkedin', 'https://www.linkedin.com/groups/8195477'),
+          ('googleplus','https://plus.google.com/communities/102117268282574409059'),
+          ('telegram','https://telegram.me/LUGParana'),
+          ('twitter','https://twitter.com/lugparana'),
+          ('youtube','http://www.youtube.com/channel/UCtzu8DvzTCHlEHse32Pl9hQ'),
+          ('github','http://www.github.com/LugParana'),
+          ('mail','mailto:lugparana@listas.usla.org.ar'),)
+
+
 ```
 
 When developing locally, set the following variable:
