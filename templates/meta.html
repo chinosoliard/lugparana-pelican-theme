@@ -1,0 +1,8 @@
+<span class="post_category">Publicado en <a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">{{ article.category }}</a></span>
+<span class="post_date"> el {{ article.locale_date }}</span>
+<div><span>Tags : </span>
+{% if article.tags %}
+{% for tag in article.tags %}
+<span><a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>,</span>
+{% endfor %}
+{% endif %}

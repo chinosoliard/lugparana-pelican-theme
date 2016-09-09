@@ -11,8 +11,7 @@
 	<li class="post_list"><p class="post_entry">
 		<img alt="{{ article.category }}" src="/images/static/{{article.category}}.png" class="alignright">
 		<h2 class="post_title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-		<span class="post_category">Publicado en <a href="{{ SITEURL }}/{{ article.category.url }}" rel="bookmark" title="Permalink to {{ article.category|striptags }}">{{ article.category }}</a></span>
-		<span class="post_date">el {{ article.locale_date }}</span>
+		{% include 'meta.html' %}
 		<span class="post_summary">{{ article.summary }}</span>
 	</li>
 	{% endfor %}
