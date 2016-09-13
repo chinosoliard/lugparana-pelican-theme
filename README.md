@@ -13,8 +13,6 @@ You can see the theme in action at https://lugparana.org
 
 ![homepage-web](screenshot-web.png)
 
-![article](screenshot-article.png)
-
 
 ## Features
 
@@ -59,21 +57,6 @@ SOCIAL = (('facebook', 'https://www.facebook.com/YourProfile/'),
           ('youtube','http://www.youtube.com/channel/YourChannel'),
           ('github','http://www.github.com/YourProfile'),
           ('mail','YourMail@YourDomain'),)  
-```
-
-* Also, you can add a sitelogo/profile photo, adding the following code to your `pelicanconf.py` file:  
-
-```python
-SITELOGO = '/path/to/logo.png'  
-```
-
-* There's a way to show custom icons to categories (**WARNING:** Doing this, ALL categories must have an icon):  
-
-  * Save the icons (in png format) with the same name that the category  (category "Events" must be "Events.png") in a folder included in STATIC_PATH in pelicanconf.py.  
-  * Add the following to the `pelicanconf.py` file:
-```python
-CATEGORY_ICONS = True
-CATEGORY_ICONS_PATH = "/path/to/category/icons/"
 ```
 
 * That's it! You have installed `lugparana`. To see the Theme in action run the devserver
