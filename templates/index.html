@@ -9,7 +9,11 @@
 <ol>
 	{% for article in (articles_page.object_list if articles_page else articles) %}
 	<li class="post_list"><p class="post_entry">
-		<img alt="{{ article.category }}" src="/images/static/{{article.category}}.png" class="alignright">
+		{% if CATEGORY_ICONS %}
+		<img alt="{{ article.category }}" src="{{ CATEGORY_ICONS_PATH }}{{article.category}}.png" class="alignright">
+		{% else %}
+		<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icons/blog.png" class="alignright">>
+		{% endif %}
 		<h2 class="post_title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 		{% include 'meta.html' %}
 		<span class="post_summary">{{ article.summary }}</span>

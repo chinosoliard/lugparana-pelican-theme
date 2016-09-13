@@ -18,46 +18,65 @@ You can see the theme in action at https://lugparana.org
 
 ## Features
 
-* Responsive (Mobile Friendly Test on [Google](https://www.google.com/webmasters/tools/mobile-friendly/?url=https%3A%2F%2Fparbhatpuri.com%2F))
-* Fast (Load time tested on [Pingdom](http://tools.pingdom.com/fpt/#!/bT0Pry/https://parbhatpuri.com/): 540ms)
+* Responsive
 * Syntax highlighting for code blocks
-* [Disqus](https://disqus.com/) for Comments
 * Google Analytics
 * RSS/ATOM feeds
 * Easy to install
+* Custom site logo
+* Custom Categories logo
 
 ## Installation
 
-You can install Pelican-Blue theme to your earlier Pelican project or create a new project from the Pelican [Quickstart](http://docs.getpelican.com/en/3.6.3/quickstart.html) guide.
+You can install lugparana theme to your earlier Pelican project or create a new project from the Pelican [Quickstart](http://docs.getpelican.com/en/3.6.3/quickstart.html) guide.
 
 * Clone the repository
 
 ```
-$ git clone https://github.com/Parbhat/pelican-blue.git
+$ git clone https://github.com/chinosoliard/lugparana-pelican-theme.git
 ```
 
-* Create a `THEME` variable in your `pelicanconf.py` file and set its value to the location of pelican-blue theme.
+* Create a `THEME` variable in your `pelicanconf.py` file and set its value to the location of lugparana theme.
 
 ```python
 THEME = 'path-to-pelican-blue-theme'
 ```
 
-If you have placed the `pelican-blue` theme inside your project's pelican-themes folder, change the `THEME` variable in `pelicanconf.py` to
+If you have placed the `lugparana` theme inside your project's pelican-themes folder, change the `THEME` variable in `pelicanconf.py` to
 
 ```python
-THEME = 'pelican-themes/pelican-blue'
+THEME = 'lugparana'
 ```
 
 * Add the following code to your `pelicanconf.py` file to display the social icons.
 
 ```python
-SOCIAL = (('linkedin', 'https://www.linkedin.com/in/username'),
-          ('github', 'https://github.com/username'),
-          ('twitter', 'https://twitter.com/username'),
-          )
+SOCIAL = (('facebook', 'https://www.facebook.com/YourProfile/'),
+          ('linkedin', 'https://www.linkedin.com/YourProfile'),
+          ('googleplus','https://plus.google.com/YourProfile'),
+          ('telegram','https://telegram.me/Link'),
+          ('twitter','https://twitter.com/YourProfile'),
+          ('youtube','http://www.youtube.com/channel/YourChannel'),
+          ('github','http://www.github.com/YourProfile'),
+          ('mail','YourMail@YourDomain'),)  
 ```
 
-* That's it! You have installed `pelican-blue`. To see the Theme in action run the devserver
+* Also, you can add a sitelogo/profile photo, adding the following code to your `pelicanconf.py` file:  
+
+```python
+SITELOGO = '/path/to/logo.png'  
+```
+
+* There's a way to show custom icons to categories (**WARNING:** Doing this, ALL categories must have an icon):  
+
+  * Save the icons (in png format) with the same name that the category  (category "Events" must be "Events.png") in a folder included in STATIC_PATH in pelicanconf.py.  
+  * Add the following to the `pelicanconf.py` file:
+```python
+CATEGORY_ICONS = True
+CATEGORY_ICONS_PATH = "/path/to/category/icons/"
+```
+
+* That's it! You have installed `lugparana`. To see the Theme in action run the devserver
 
 ```
 make devserver
@@ -91,10 +110,21 @@ SOCIAL = (('facebook', 'https://www.facebook.com/groups/lugparana/'),
           ('twitter','https://twitter.com/lugparana'),
           ('youtube','http://www.youtube.com/channel/UCtzu8DvzTCHlEHse32Pl9hQ'),
           ('github','http://www.github.com/LugParana'),
-          ('mail','mailto:lugparana@listas.usla.org.ar'),)
+          ('mail','mailto:lugparana@listas.usla.org.ar'),)i
 
 
 ```
+
+There's a way to show custom icons to categories (**WARNING:** Doing this, ALL categories must have an icon):
+
+  * Save the icons (in png format) with the same name that the category  (category "Events" must be "Events.png") in a folder included in STATIC_PATH in pelicanconf.py.
+  * Add the following to the `pelicanconf.py` file:
+
+```python
+CATEGORY_ICONS = True
+CATEGORY_ICONS_PATH = "/path/to/category/icons/"
+```
+
 
 When developing locally, set the following variable:
 ```
@@ -118,7 +148,3 @@ GOOGLE_ANALYTICS = ""
 ```
 
 For more information on publishing your site, read the publishing [docs](http://docs.getpelican.com/en/3.6.3/publish.html)
-
-## Contributing
-
-Your contributions are welcome to improve the `pelican-blue` theme.
